@@ -25,8 +25,8 @@ input[type="button"],input[type="submit"],li.parallelogram{
 	-ms-transition:0.5s all;
 }
 h1,h2,h3,h4,h5,h6{
-   margin:0;	
-}	
+   margin:0;
+}
 p{
 	margin:0;
 font-family: 'Open Sans', sans-serif;
@@ -50,7 +50,7 @@ div#bs-example-navbar-collapse-1 {
 }
 /*--header-nav--*/
 .header{
-    background-color: #E1009F;
+    background-color: #4a4a4a;
     border: none;
     padding: .6em 0em 1.8em;
     margin: 0;
@@ -64,8 +64,8 @@ div#bs-example-navbar-collapse-1 {
     margin-bottom: 0 !important;
 }
 .navbar-default {
-    background-color: #E1009F !important;
-    border-color: #E1009F !important;
+    background-color: #4a4a4a !important;
+    border-color: #4a4a4a !important;
 }
 .navbar-header a.navbar-brand {
 	color: #fff;
@@ -461,8 +461,8 @@ i.arrow {
 	 color:#fff;
  }
 /* Login Button */
-#loginButton { 
-    display:inline-block;  
+#loginButton {
+    display:inline-block;
     position:relative;
     z-index:30;
     cursor:pointer;
@@ -541,7 +541,7 @@ fieldset#body {
   -o-transition: all .5s;
   outline:none;
   text-transform: uppercase;
-  
+
 }
 #loginForm #login:hover{
      background:#476bba;
@@ -670,13 +670,13 @@ i.glyphicon.glyphicon-font{
 	color:#E1009F ;
 }
 i.glyphicon.glyphicon-blackboard{
-    font-size: 3em;	
+    font-size: 3em;
 }
 .welcome-grid:hover.welcome-grid h3{
 	color:#E1009F ;
 }
 i.glyphicon.glyphicon-education{
-    font-size: 3em;	
+    font-size: 3em;
 }
 .welcome-grid:hover.welcome-grid h3{
 	color:#E1009F ;
@@ -1343,7 +1343,7 @@ ul.p_n-list li a{
 }
 ul.p_n-list li a:hover{
 	background:#000;
-}		
+}
 /*-- .gallery__ Gallery Page Ends Here --*/
 /*-- contact --*/
 .contact{
@@ -2196,7 +2196,7 @@ ul.p_n-list li a:hover{
 	}
 	.rslides p {
 	    width: 77%;
-	}	
+	}
 	.welcome h2 {
 	    font-size: 1.8em;
 	    margin: 0;
@@ -2273,7 +2273,7 @@ ul.p_n-list li a:hover{
 	.testimonal-grid {
 	    width: 100%;
 	    float: none;
-	}	
+	}
 	.testi-info {
 	    margin-bottom: 2em;
 	}
