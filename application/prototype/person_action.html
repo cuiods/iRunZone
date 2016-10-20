@@ -17,6 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- /js -->
 <!--fonts-->
 <link href='css/googlecssfamily.css' rel='stylesheet' type='text/css'>
+<link href="css/person.css" rel="stylesheet">
 <!--/fonts-->
 <!--hover-girds-->
 <link rel="stylesheet" type="text/css" href="css/default.css" />
@@ -59,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   								<li><a href="action.html"><span data-hover="Actions">动态</span></a></li>
                   <li><a href="group.html"><span data-hover="Group">小组</span></a></li>
   								<li><a href="statistic.html"><span data-hover="Statistic">统计</span></a></li>
-									<li><a href="person_activity.html"><span data-hover="Statistic">个人主页</span></a></li>
+                  <li><a href="person_activity.html"><span data-hover="Statistic">个人主页</span></a></li>
   							</ul>
   							<div class="clearfix"> </div>
   						</div><!-- /.navbar-collapse -->
@@ -94,107 +95,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- Top Navigation -->
 	<div class="banner banner5">
 		<div class="container">
-		<h2>小组</h2>
+		<h2>个人主页</h2>
 		</div>
 	</div>
 
-  <div class="gallery">
-    <!-- Page Starts Here -->
-    <div class="content">
-      <div class="container">
-        <div class="gallery">
-          <div class="gallery-top">
-            <div class="view view-tenth">
-              <img src="images/g1.jpg" alt=""/>
-              <div class="mask">
-                <h3>新人报道</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g2.jpg" alt=""/>
-              <div class="mask">
-                <h3>每日打卡</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g3.jpg" alt=""/>
-              <div class="mask">
-                <h3>健身知识讨论</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g4.jpg" alt=""/>
-              <div class="mask">
-                <h3>好身材吃出来</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g5.jpg" alt=""/>
-              <div class="mask">
-                <h3>我们都是装备控</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g6.jpg" alt=""/>
-              <div class="mask">
-                <h3>学生党一起练</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g7.jpg" alt=""/>
-              <div class="mask">
-                <h3>Runners in iRunZone</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g8.jpg" alt=""/>
-              <div class="mask">
-                <h3>减脂大本营</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g9.jpg" alt=""/>
-              <div class="mask">
-                <h3>分享最近的进步</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g10.jpg" alt=""/>
-              <div class="mask">
-                <h3>我们爱运动</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g11.jpg" alt=""/>
-              <div class="mask">
-                <h3>肌肉爱好者联盟</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="view view-tenth">
-              <img src="images/g12.jpg" alt="" />
-              <div class="mask">
-                <h3>iRunZone坚持100天</h3>
-                <p><button type="button" class="btn btn-default navbar-btn">加入小组</button></p>
-              </div>
-            </div>
-            <div class="clearfix"> </div>
-          </div>
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="person_activity.html">活动</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="person_friend.html">好友</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="person_group.html">小组</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="person_action.html">动态</a></li>
+            <li><a href="#my-action">我的动态</a></li>
+            <li><a href="#my-article">我的文章</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="#">消息中心</a></li>
+          </ul>
         </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header" id="my-action">我的动态</h1>
+          <!-- Main component for a primary marketing message or call to action -->
+          <div class="jumbotron">
+            <h2>进一寸有一寸的欢喜</h2>
+            <p>练腿日，因为学校的gym没有史密斯架</p>
+            <p>开始向自由深蹲过度 小重量慢慢来</p>
+          </div>
+          <div class="jumbotron">
+            <h2>能，所不能</h2>
+            <p>#我要上精选# @iRunZone精选</p>
+            <p>这个角度俯瞰漓江，感觉棒棒哒！</p>
+          </div>
+          <h1 class="page-header" id="my-article">我的文章</h1>
+          <div class="about-info-grids">
+   				 <div class="col-md-3 abt-pic">
+   					 <img src="images/img1.jpg" class="img-responsive" alt=""/>
+   				 </div>
+   				 <div class="col-md-9 abt-info-pic">
+   					 <h3>核心打造强劲引擎</h3>
+   					 <p>传说中的电动小马达，八块腹肌，马甲线，通过核心改造get起来！传说中的电动小马达，八块腹肌，马甲线，通过核心改造get起来！
+              传说中的电动小马达，八块腹肌，马甲线，通过核心改造get起来！传说中的电动小马达，八块腹肌，马甲线，通过核心改造get起来！</p>
+   				 </div>
+   				 <div class="clearfix"> </div>
+   			 </div>
+         <div class="about-info-grids">
+  				 <div class="col-md-3 abt-pic">
+  					 <img src="images/img2.jpg" class="img-responsive" alt=""/>
+  				 </div>
+  				 <div class="col-md-9 abt-info-pic">
+  					 <h3>信念不死，健身不止</h3>
+  					 <p>揣上坚强的信念，开始成长的旅行。揣上坚强的信念，开始成长的旅行。揣上坚强的信念，开始成长的旅行。揣上坚强的信念，开始成长的旅行。
+             揣上坚强的信念，开始成长的旅行。揣上坚强的信念，开始成长的旅行。揣上坚强的信念，开始成长的旅行。揣上坚强的信念，开始成长的旅行。
+           揣上坚强的信念，开始成长的旅行。揣上坚强的信念，开始成长的旅行。揣上坚强的信念，开始成长的旅行。揣上坚强的信念，开始成长的旅行。</p>
+  				 </div>
+  				 <div class="clearfix"> </div>
+  			 </div>
       </div>
     </div>
-    <!-- Page Ends Here -->
-  </div>
 
   <!--/footer-->
   <!--copy-rights-->
