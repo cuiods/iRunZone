@@ -43,7 +43,7 @@
                                 <label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住我</i></label>
                             </fieldset>
                             <span><a href="#">忘记密码?</a></span>
-                            <span><a href="/authController">点击注册</a></span>
+                            <span><a href="/auth">点击注册</a></span>
                         </form>
                     </div>
                 </div>

@@ -42,32 +42,34 @@
 require_once 'header.php';
 ?>
 <div class="main">
-    <!-----start-main---->
-    <div class="inset">
-        <div class="social-icons">
-            <div class="span"><a href="#"><img src="images/fb.png" alt=""/><i>Connect with Facebook </i><div class="clear"></div></a></div>
-            <div class="span1"><a href="#"><img src="images/t-bird.png" alt=""/><i>Connect with Twitter</i><div class="clear"></div></a></div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <h2>Or sign up with</h2>
-    <form>
-        <div class="lable">
-            <input type="text" class="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
 
+    <div class="alert alert-info" role="alert"><?=validation_errors()?></div>
+    <!-----start-main---->
+    <?php echo form_open('auth/register'); ?>
+        <div class="lable">
+            <h3>请输入用户名</h3>
+            <input type="text" name="username" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
         </div>
         <div class="clear"> </div>
         <div class="lable-2">
-            <input type="password" class="text" value="Password " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
-            <input type="password" class="text" value="Password " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+            <h3>请输入密码</h3><input type="password" name="password" class="text" value="<?php echo set_value('password'); ?>"><br><br><br><br>
+            <h3>请再次输入密码</h3><input type="password" name="passconfirm" class="text" value="<?php echo set_value('passconfirm'); ?>">
         </div>
         <div class="clear"> </div>
         <h3>By creating an account, you agree to our <span><a href="#">Terms & Conditions</a> <span></h3>
         <div class="submit">
-            <input type="submit" onclick="myFunction()" value="Create account" >
+            <input type="submit"  value="注册账号" >
         </div>
         <div class="clear"> </div>
     </form>
+    <h2>或使用社交账号登陆</h2>
+    <div class="inset">
+        <div class="social-icons">
+            <div class="span"><a href="#"><img src="/images/fb.png" alt=""/><i>Connect with Facebook </i><div class="clear"></div></a></div>
+            <div class="span1"><a href="#"><img src="/images/t-bird.png" alt=""/><i>Connect with Twitter</i><div class="clear"></div></a></div>
+            <div class="clear"></div>
+        </div>
+    </div>
     <!-----//end-main---->
 
 </div>
