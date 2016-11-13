@@ -1,41 +1,3 @@
-<!doctype html>
-<html>
-<head>
-    <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="爱跑空间,跑步社交,iRunZone,Running,Zone" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!--bootstrap-->
-    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!--coustom css-->
-    <link href='<?=base_url().'css/style.css'?>' rel="stylesheet" type="text/css"/>
-    <!--script-->
-    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <!-- js -->
-    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- /js -->
-    <!--fonts-->
-    <link href='<?=base_url().'plugin/googlecssfamily.css'?>' rel='stylesheet' type='text/css'>
-    <!--/fonts-->
-    <!--hover-girds-->
-    <link rel="stylesheet" type="text/css" href='<?=base_url().'css/default.css'?>' />
-    <link rel="stylesheet" type="text/css" href='<?=base_url().'css/component.css'?>' />
-    <script src='<?=base_url().'plugin/modernizr.custom.js'?>'></script>
-    <!--/hover-grids-->
-    <script type="text/javascript" src='<?=base_url().'js/move-top.js'?>'></script>
-    <script type="text/javascript" src='<?=base_url().'js/easing.js'?>'></script>
-    <!--script-->
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-            });
-        });
-    </script>
-    <!--/script-->
-</head>
 <body>
 <!--header-->
 <div class="header" id="home">
@@ -81,6 +43,7 @@
                                 <label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住我</i></label>
                             </fieldset>
                             <span><a href="#">忘记密码?</a></span>
+                            <span><a href="/authController">点击注册</a></span>
                         </form>
                     </div>
                 </div>
