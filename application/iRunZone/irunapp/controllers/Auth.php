@@ -7,9 +7,16 @@ class Auth extends CI_Controller {
      * show register page
      */
     public function index() {
-        $this->load->view('register_view');
+        $this->load->view('auth/register_view');
     }
 
+    public function loginview() {
+        $this->load->view('auth/login_view');
+    }
+
+    /**
+     * register controller
+     */
     public function register() {
         $this->load->helper(array('form'));
 
@@ -32,7 +39,7 @@ class Auth extends CI_Controller {
         );
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('register_view');
+            $this->load->view('auth/register_view');
         } else {
             $this->load->model('auth_model');
             $tag = $this->auth_model->user_register($_POST ['username'], md5($_POST ['password']));
@@ -40,33 +47,43 @@ class Auth extends CI_Controller {
         }
     }
 
+    /**
+     * login controller
+     */
     public function login() {
         $this->load->helper(array('form'));
         $this->form_validation->set_rules(
-            'username', '用户名', 'required',
+            'username_login', '用户名', 'required',
             array(
                 'required'  => '请输入 %s.'
             )
         );
         $this->form_validation->set_rules(
-            'password', '密码', 'required',
+            'password_login', '密码', 'required',
             array(
                 'required'  => '请输入 %s.'
             )
         );
         if ($this->form_validation->run() == false) {
-            redirect('/welcome');
+            redirect('/auth');
         } else {
-            $userName = $_POST['username'];
-            $result_code = $this->verifyUser($userName,$_POST['password']);
+            $userName = $_POST['username_login'];
+            $result_code = $this->verifyUser($userName,md5($_POST['password_login']));
             $this->session->set_userdata('login_code',$result_code);
             if ($result_code == 2) {
                 $this->session->set_userdata('username',$userName);
+                redirect("/welcome");
             }
             redirect("/welcome");
         }
     }
 
+    /**
+     * verify user info
+     * @param $userName
+     * @param $password
+     * @return mixed
+     */
     private function verifyUser($userName, $password) {
         $this->load->model('auth_model');
         return $this->auth_model->verifyUser($userName, $password);

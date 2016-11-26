@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Home</title>
+    <title>iRunZone-首页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="爱跑空间,跑步社交,iRunZone,Running,Zone" />
@@ -37,7 +37,7 @@
     <!--/script-->
 </head>
 <?php
-require_once 'header.php';
+require_once 'component/header.php';
 ?>
 <!-- Top Navigation -->
 <div class="banner">
@@ -107,7 +107,7 @@ require_once 'header.php';
             </div>
             <div class="col-md-3 welcome-grid">
                 <i class="glyphicon glyphicon-blackboard"> </i>
-                <h3>轨迹</h3>
+                <h3>统计</h3>
                 <p>我走过的每一步都有风景，你走的每一步都有故事。</p>
             </div>
             <div class="col-md-3 welcome-grid">
@@ -166,5 +166,5 @@ require_once 'header.php';
 </div>
 <!--/specfication-->
 <?php
-require_once 'footer.php';
+require_once 'component/footer.php';
 ?>

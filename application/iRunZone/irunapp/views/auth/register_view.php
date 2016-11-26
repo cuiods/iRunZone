@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Home</title>
+    <title>iRunZone-注册新用户</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="爱跑空间,跑步社交,iRunZone,Running,Zone" />
@@ -39,7 +39,7 @@
     <!--/script-->
 </head>
 <?php
-require_once 'header.php';
+require_once ("../component/header.php");
 ?>
 <div class="main">
 
@@ -56,7 +56,7 @@ require_once 'header.php';
             <h3>请再次输入密码</h3><input type="password" name="passconfirm" class="text" value="<?php echo set_value('passconfirm'); ?>">
         </div>
         <div class="clear"> </div>
-        <h3>By creating an account, you agree to our <span><a href="#">Terms & Conditions</a> <span></h3>
+        <h3>已有账号？ <span><a href="/auth/loginview">点击这里登陆</a> <span></h3>
         <div class="submit">
             <input type="submit"  value="注册账号" >
         </div>
@@ -74,5 +74,5 @@ require_once 'header.php';
 
 </div>
 <?php
-require_once 'footer.php';
+require_once ("../component/footer.php");
 ?>
