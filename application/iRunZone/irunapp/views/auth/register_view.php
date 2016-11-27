@@ -43,17 +43,23 @@ require_once(APPPATH.'views/component/header.php');
 ?>
 <div class="main">
 
-    <div class="alert alert-info" role="alert"><?=validation_errors()?></div>
+    <?php
+    $error_msg = validation_errors();
+    if (!empty($error_msg)) {
+        echo "<div class=\"alert alert-danger\" role=\"alert\">$error_msg</div>";
+    }
+    ?>
+
     <!-----start-main---->
     <?php echo form_open('auth/register'); ?>
         <div class="lable">
-            <h3>请输入用户名</h3>
-            <input type="text" required="" name="username" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
+            <label for="user_register">请输入用户名</label>
+            <input id="user_register" type="text" required="" name="username" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
         </div>
         <div class="clear"> </div>
         <div class="lable-2">
-            <h3>请输入密码</h3><input type="password" required="" name="password" class="text" value="<?php echo set_value('password'); ?>"><br><br><br><br>
-            <h3>请再次输入密码</h3><input type="password" required="" name="passconfirm" class="text" value="<?php echo set_value('passconfirm'); ?>">
+            <label for="psw_register">请输入密码</label><input id="psw_register" type="password" required="" name="password" class="text" value="<?php echo set_value('password'); ?>"><br><br><br><br>
+            <label for="psw_confirm">请再次输入密码</label><input id="psw_confirm" type="password" required="" name="passconfirm" class="text" value="<?php echo set_value('passconfirm'); ?>">
         </div>
         <div class="clear"> </div>
         <h3>已有账号？ <span><a href="/auth/loginview">点击这里登陆</a> <span></h3>

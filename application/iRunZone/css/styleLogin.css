@@ -53,9 +53,10 @@ body{
 	text-align:left;
 	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.main h3 span a{
-	color:#1888A8;
+.main label{
+	color:#ffffff;
 	font-weight: bold;
+	font-size: 1.5em;
 }
 .span {
 	float:left;

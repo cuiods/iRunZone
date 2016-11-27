@@ -72,9 +72,14 @@
 </div>
 <div class="main">
 
-    <div class="alert alert-info" role="alert"><?=validation_errors()?></div>
+    <?php
+    $error_msg = validation_errors();
+    if (!empty($error_msg)) {
+        echo "<div class=\"alert alert-danger\" role=\"alert\">$error_msg</div>";
+    }
+    echo form_open('auth/login');
+    ?>
     <!-----start-main---->
-    <?php echo form_open('auth/login'); ?>
     <div class="lable">
         <h3>请输入用户名</h3>
         <input type="text" name="username_login" required="" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">

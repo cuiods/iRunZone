@@ -12,6 +12,8 @@
     <link href='<?=base_url().'css/style.css'?>' rel="stylesheet" type="text/css"/>
     <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
     <link rel="stylesheet" type="text/css" href='<?=base_url().'css/sidebar.css'?>'>
     <link rel="stylesheet" href='<?=base_url().'css/bootstrap-vertical-menu.css'?>'>
     <!--[if IE]>
@@ -65,6 +67,7 @@ require_once(APPPATH.'views/component/sidebar_sport.php');
         </div>
     </div>
 </div>
+
 <?php
 require_once(APPPATH.'views/component/footer.php');
 ?>

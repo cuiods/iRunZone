@@ -12,7 +12,6 @@ body a {
 }
 @font-face {
    font-family: 'HammersmithOne-Regular';
-   src: url(../fonts/FugazOne-Regular.ttf)format('truetype');
 }
 a:hover{
  text-decoration:none;
