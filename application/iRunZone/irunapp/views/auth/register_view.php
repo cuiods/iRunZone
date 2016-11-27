@@ -39,7 +39,7 @@
     <!--/script-->
 </head>
 <?php
-require_once ("../component/header.php");
+require_once(APPPATH.'views/component/header.php');
 ?>
 <div class="main">
 
@@ -48,12 +48,12 @@ require_once ("../component/header.php");
     <?php echo form_open('auth/register'); ?>
         <div class="lable">
             <h3>请输入用户名</h3>
-            <input type="text" name="username" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
+            <input type="text" required="" name="username" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
         </div>
         <div class="clear"> </div>
         <div class="lable-2">
-            <h3>请输入密码</h3><input type="password" name="password" class="text" value="<?php echo set_value('password'); ?>"><br><br><br><br>
-            <h3>请再次输入密码</h3><input type="password" name="passconfirm" class="text" value="<?php echo set_value('passconfirm'); ?>">
+            <h3>请输入密码</h3><input type="password" required="" name="password" class="text" value="<?php echo set_value('password'); ?>"><br><br><br><br>
+            <h3>请再次输入密码</h3><input type="password" required="" name="passconfirm" class="text" value="<?php echo set_value('passconfirm'); ?>">
         </div>
         <div class="clear"> </div>
         <h3>已有账号？ <span><a href="/auth/loginview">点击这里登陆</a> <span></h3>
@@ -74,5 +74,5 @@ require_once ("../component/header.php");
 
 </div>
 <?php
-require_once ("../component/footer.php");
+require_once(APPPATH.'views/component/footer.php');
 ?>

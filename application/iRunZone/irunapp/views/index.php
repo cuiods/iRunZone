@@ -84,41 +84,6 @@ require_once 'component/header.php';
     </div>
 </div>
 <!--header-->
-<!--weelcome-->
-<div class="welcome">
-    <div class="container">
-        <h2>欢迎来到爱跑空间</h2>
-        <p>踏上跑道，是一种选择。离开起点，是一种勇气。驰骋赛场，是一种胜利。</p>
-    </div>
-</div>
-<!--/welcome-->
-<div class="welcome-grids">
-    <div class="container">
-        <div class="welcome-gridsinfo">
-            <div class="col-md-3 welcome-grid">
-                <i class="glyphicon glyphicon-pencil"> </i>
-                <h3>步数</h3>
-                <p>设定你的目标，每天要走到多少步？</p>
-            </div>
-            <div class="col-md-3 welcome-grid">
-                <i class="glyphicon glyphicon-font"> </i>
-                <h3>距离</h3>
-                <p>统计步行+跑步距离，今天，你前进了多远？</p>
-            </div>
-            <div class="col-md-3 welcome-grid">
-                <i class="glyphicon glyphicon-blackboard"> </i>
-                <h3>统计</h3>
-                <p>我走过的每一步都有风景，你走的每一步都有故事。</p>
-            </div>
-            <div class="col-md-3 welcome-grid">
-                <i class="glyphicon glyphicon-education"> </i>
-                <h3>跑步时间</h3>
-                <p>成功源于坚持。</p>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-</div>
 
 <!--specfication-->
 <div class="news">
@@ -165,6 +130,41 @@ require_once 'component/header.php';
     </div>
 </div>
 <!--/specfication-->
+<!--weelcome-->
+<div class="welcome">
+    <div class="container">
+        <h2>欢迎来到爱跑空间</h2>
+        <p>踏上跑道，是一种选择。离开起点，是一种勇气。驰骋赛场，是一种胜利。</p>
+    </div>
+</div>
+<!--/welcome-->
+<div class="welcome-grids">
+    <div class="container">
+        <div class="welcome-gridsinfo">
+            <div class="col-md-3 welcome-grid">
+                <i class="glyphicon glyphicon-pencil"> </i>
+                <h3>步数</h3>
+                <p>设定你的目标，每天要走到多少步？</p>
+            </div>
+            <div class="col-md-3 welcome-grid">
+                <i class="glyphicon glyphicon-font"> </i>
+                <h3>距离</h3>
+                <p>统计步行+跑步距离，今天，你前进了多远？</p>
+            </div>
+            <div class="col-md-3 welcome-grid">
+                <i class="glyphicon glyphicon-blackboard"> </i>
+                <h3>统计</h3>
+                <p>我走过的每一步都有风景，你走的每一步都有故事。</p>
+            </div>
+            <div class="col-md-3 welcome-grid">
+                <i class="glyphicon glyphicon-education"> </i>
+                <h3>跑步时间</h3>
+                <p>成功源于坚持。</p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
 <?php
 require_once 'component/footer.php';
 ?>

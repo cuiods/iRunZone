@@ -35,46 +35,36 @@
     <!--/script-->
 </head>
 <?php
-require_once ("../component/header.php");
+require_once(APPPATH.'views/component/header.php');
+require_once(APPPATH.'views/component/sidebar_sport.php');
 ?>
-<nav class="navbar navbar-vertical-left">
-    <ul class="nav navbar-nav">
-        <li>
-            <a href>
-                <i class="fa fa-fw fa-lg fa-home"></i>
-                <span>我</span>
-            </a>
-        </li>
-        <li>
-            <a href>
-                <i class="fa fa-fw fa-lg fa-download "></i>
-                <span>运动</span>
-            </a>
-        </li>
-        <li>
-            <a href>
-                <i class="fa fa-fw fa-lg fa-comments-o"></i>
-                <span>睡眠</span>
-            </a>
-        </li>
-        <li>
-            <a href>
-                <i class="fa fa-fw fa-lg fa-desktop"></i>
-                <span>身体</span>
-            </a>
-        </li>
-    </ul>
-</nav>
-<div class="htmleaf-container">
-    <header class="htmleaf-header">
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhh<span>A vertical menu for desktop web apps, using bootstrap</span></h1>
-
-    </header>
-    <div class="htmleaf-content bgcolor-8">
-        <h2>Bootstrap</h2>
+<div class="welcome">
+    <div class="container">
+        <h2>我加入iRunZone以来</h2>
     </div>
-
+</div>
+<div class="welcome-grids">
+    <div class="container">
+        <div class="welcome-gridsinfo">
+            <div class="col-md-4 welcome-grid">
+                <i class="glyphicon glyphicon-pencil"> </i>
+                <p>累计运动</p>
+                <h3>1111111步</h3>
+            </div>
+            <div class="col-md-4 welcome-grid">
+                <i class="glyphicon glyphicon-font"> </i>
+                <p>累计运动</p>
+                <h3>100天</h3>
+            </div>
+            <div class="col-md-4 welcome-grid">
+                <i class="glyphicon glyphicon-blackboard"> </i>
+                <p>累计消耗</p>
+                <h3>100大卡</h3>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
 </div>
 <?php
-require_once ("../component/footer.php");
+require_once(APPPATH.'views/component/footer.php');
 ?>

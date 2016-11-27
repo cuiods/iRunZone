@@ -77,11 +77,11 @@
     <?php echo form_open('auth/login'); ?>
     <div class="lable">
         <h3>请输入用户名</h3>
-        <input type="text" name="username_login" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
+        <input type="text" name="username_login" required="" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
     </div>
     <div class="clear"> </div>
     <div class="lable-2">
-        <h3>请输入密码</h3><input type="password" name="password_login" class="text" value="<?php echo set_value('password'); ?>"><br><br><br><br>
+        <h3>请输入密码</h3><input type="password" required="" name="password_login" class="text" value="<?php echo set_value('password'); ?>"><br><br><br><br>
     </div>
     <div class="clear"> </div>
     <h3>没有账号？ <span><a href="/auth">点击这里注册</a> <span></h3>
@@ -102,5 +102,5 @@
 
 </div>
 <?php
-require_once ("../component/footer.php");
+require_once(APPPATH.'views/component/footer.php');
 ?>

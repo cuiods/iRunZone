@@ -653,6 +653,7 @@ fieldset#body {
 border-top: 2px solid#DCDCDC;
     padding: 20px 0;
         text-align: center;
+    margin-bottom: 100px;
 }
 .welcome-grid:nth-child(4) {
     border-right:none;
