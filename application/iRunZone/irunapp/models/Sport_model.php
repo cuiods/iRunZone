@@ -22,7 +22,7 @@ class Sport_model extends CI_Model {
     }
 
     public function getTodayStep($uid) {
-        $sql = "SELECT steps,ideal_steps FROM t_exercise JOIN t_user_info ON t_exercise.uid = t_user_info.uid WHERE t_exercise.uid = ? ";
+        $sql = "select steps,ideal_steps FROM t_exercise JOIN t_user_info ON t_exercise.uid = t_user_info.uid WHERE t_exercise.uid = ? AND abs(julianday('now')-julianday(date))<1";
         $query = $this->db->query($sql, array($uid));
         foreach ($query->result() as $row) {
             return $row;

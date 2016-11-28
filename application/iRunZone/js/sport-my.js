@@ -50,29 +50,37 @@ $(function () {
             }
         }
     };
-    // The speed gauge
-    $('#sport-my-complete').highcharts(Highcharts.merge(gaugeOptions, {
-        yAxis: {
-            min: 0,
-            max: 100,
-            title: {
-                text: 'Rate'
-            }
-        },
-        credits: {
-            enabled: false
-        },
-        series: [{
-            name: 'Rate',
-            data: [80],
-            dataLabels: {
-                format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                '<span style="font-size:12px;color:silver">%</span></div>'
-            },
-            tooltip: {
-                valueSuffix: ' %'
-            }
-        }]
-    }));
+    $.ajax({
+        url:"/sport/sportinfo",
+        method: "GET",
+        success:function (myData) {
+            var jsonData = eval("("+myData+")");
+            // The speed gauge
+            $('#sport-my-complete').highcharts(Highcharts.merge(gaugeOptions, {
+                yAxis: {
+                    min: 0,
+                    max: 100,
+                    title: {
+                        text: 'Rate'
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Rate',
+                    data: [jsonData['rate']],
+                    dataLabels: {
+                        format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
+                        '<span style="font-size:12px;color:silver">%</span></div>'
+                    },
+                    tooltip: {
+                        valueSuffix: ' %'
+                    }
+                }]
+            }));
+        }
+    });
+
 });

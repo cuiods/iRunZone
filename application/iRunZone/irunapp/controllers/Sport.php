@@ -20,13 +20,26 @@ class Sport extends CI_Controller {
         $this->load->view('sport/sport_view', $data);
     }
 
+    /**
+     * !!ajax method
+     * get sport info, includes meter,minutes,calories and complete rate
+     */
     public function sportinfo() {
         $this->load->model('sport_model');
         $uid = $_SESSION['uid'];
-
+        $sum = $this->sport_model->getSumSportData($_SESSION['uid']);
         $steps = $this->sport_model->getTodayStep($uid);
-        $data['steps'] = $steps;
-        echo $data;
+        $data['distance'] = $sum->meters;
+        $data['time'] = $sum->minutes;
+        $data['calorie'] = $sum->calories;
+        if (!isset($steps)) {
+            $data['rate'] = 0;
+        } else {
+            $rate = $steps->steps * 1.0 / $steps->ideal_steps * 100;
+            if ($rate>100) $rate = 100;
+            $data['rate'] = $rate;
+        }
+        echo json_encode($data);
     }
 
     public function exercise() {
