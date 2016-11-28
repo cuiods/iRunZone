@@ -68,10 +68,12 @@ class Auth extends CI_Controller {
             redirect('/auth');
         } else {
             $userName = $_POST['username_login'];
+            $this->load->model('auth_model');
             $result_code = $this->verifyUser($userName,md5($_POST['password_login']));
             $this->session->set_userdata('login_code',$result_code);
             if ($result_code == 2) {
                 $this->session->set_userdata('username',$userName);
+                $this->session->set_userdata('uid',$this->auth_model->getUserIdByName($userName));
                 redirect("/welcome");
             }
             redirect("/welcome");
@@ -85,7 +87,6 @@ class Auth extends CI_Controller {
      * @return mixed
      */
     private function verifyUser($userName, $password) {
-        $this->load->model('auth_model');
         return $this->auth_model->verifyUser($userName, $password);
     }
 }

@@ -37,4 +37,12 @@ class Auth_model extends CI_Model {
         }
         return $result_code;
     }
+
+    public function getUserIdByName($username) {
+        $sql = "SELECT * FROM t_user_base WHERE uname = ?";
+        $query = $this->db->query($sql, array($username));
+        foreach ($query->result() as $row) {
+            return $row->uid;
+        }
+    }
 }

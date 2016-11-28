@@ -14,6 +14,9 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//cdn.hcharts.cn/highcharts/highcharts.js"></script>
     <script src="//cdn.hcharts.cn/highcharts/highcharts-more.js"></script>
+    <script src="//cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="//cdn.hcharts.cn/highcharts/modules/data.js"></script>
+    <script src="//cdn.hcharts.cn/highcharts/modules/heatmap.js"></script>
     <script src='<?=base_url().'js/sport-exercise.js'?>'></script>
     <link rel="stylesheet" type="text/css" href='<?=base_url().'css/sidebar.css'?>'>
     <link rel="stylesheet" href='<?=base_url().'css/bootstrap-vertical-menu.css'?>'>
@@ -41,6 +44,31 @@
 require_once(APPPATH.'views/component/header.php');
 require_once(APPPATH.'views/component/sidebar_sport.php');
 ?>
-<div class="container">
-
+<div class="welcome">
+    <div class="container">
+        <h2>今日运动跟踪</h2>
+    </div>
 </div>
+<div class="container">
+    <div id="sport-exercise-track"></div>
+</div>
+<div class="welcome">
+    <div class="container">
+        <h2>30天运动统计</h2>
+    </div>
+</div>
+<div class="container">
+    <div id="sport-exercise-statistic"></div>
+    <div class="message"></div>
+</div>
+<div class="welcome">
+    <div class="container">
+        <h2>运动量统计</h2>
+    </div>
+</div>
+<div class="container">
+    <div id="sport-exercise-month"></div>
+</div>
+<?php
+require_once(APPPATH.'views/component/footer.php');
+?>

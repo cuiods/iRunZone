@@ -570,7 +570,7 @@ fieldset#body {
   padding: 0 16px;
 }
 .welcome {
-     padding: 5em 0 5em;
+     padding: 4em 0 4em;
     text-align: center;
 }
 .welcome h2 {
@@ -652,7 +652,7 @@ fieldset#body {
 border-top: 2px solid#DCDCDC;
     padding: 20px 0;
         text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 5em;
 }
 .welcome-grid:nth-child(4) {
     border-right:none;
