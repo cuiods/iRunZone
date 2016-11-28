@@ -14,8 +14,7 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//cdn.hcharts.cn/highcharts/highcharts.js"></script>
     <script src="//cdn.hcharts.cn/highcharts/highcharts-more.js"></script>
-    <script src="//cdn.hcharts.cn/highcharts/modules/solid-gauge.js"></script>
-    <script src='<?=base_url().'js/sport-my.js'?>'></script>
+    <script src='<?=base_url().'js/sport-exercise.js'?>'></script>
     <link rel="stylesheet" type="text/css" href='<?=base_url().'css/sidebar.css'?>'>
     <link rel="stylesheet" href='<?=base_url().'css/bootstrap-vertical-menu.css'?>'>
     <!--[if IE]>
@@ -42,39 +41,6 @@
 require_once(APPPATH.'views/component/header.php');
 require_once(APPPATH.'views/component/sidebar_sport.php');
 ?>
-<div class="welcome" >
-    <div class="container">
-        <h2>今天目标完成</h2>
-    </div>
-    <div id="sport-my-complete"></div>
+<div class="container">
+
 </div>
-<div class="welcome">
-    <div class="container">
-        <h2>我加入iRunZone以来</h2>
-    </div>
-</div>
-<div class="welcome-grids">
-    <div class="container">
-        <div class="welcome-gridsinfo">
-            <div class="col-md-4 welcome-grid">
-                <i class="glyphicon glyphicon-pencil"> </i>
-                <p>累计运动</p>
-                <h3>1111111步</h3>
-            </div>
-            <div class="col-md-4 welcome-grid">
-                <i class="glyphicon glyphicon-font"> </i>
-                <p>累计运动</p>
-                <h3>100天</h3>
-            </div>
-            <div class="col-md-4 welcome-grid">
-                <i class="glyphicon glyphicon-blackboard"> </i>
-                <p>累计消耗</p>
-                <h3>100大卡</h3>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-</div>
-<?php
-require_once(APPPATH.'views/component/footer.php');
-?>
