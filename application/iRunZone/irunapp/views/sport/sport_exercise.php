@@ -46,7 +46,7 @@ require_once(APPPATH.'views/component/sidebar_sport.php');
 ?>
 <div class="welcome">
     <div class="container">
-        <h2>今日运动跟踪</h2>
+        <h2>运动跟踪</h2>
     </div>
 </div>
 <div class="container">

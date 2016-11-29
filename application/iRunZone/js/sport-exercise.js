@@ -6,12 +6,13 @@ $(function () {
         timezoneOffset: -8
     });
     $.getJSON('http://datas.org.cn/jsonp?filename=json/usdeur.json&callback=?', function (data) {
+        alert(data);
         $('#sport-exercise-track').highcharts({
             chart: {
                 zoomType: 'x'
             },
             title: {
-                text: '美元兑欧元汇率走势图'
+                text: '运动距离统计图'
             },
             subtitle: {
                 text: document.ontouchstart === undefined ?
@@ -44,7 +45,7 @@ $(function () {
             },
             yAxis: {
                 title: {
-                    text: 'Exchange rate'
+                    text: '运动距离(万米)'
                 }
             },
             legend: {
@@ -78,7 +79,7 @@ $(function () {
             },
             series: [{
                 type: 'area',
-                name: '美元兑欧元',
+                name: '运动距离',
                 data: data
             }]
         });
@@ -97,10 +98,7 @@ $(function () {
                 csv: csv
             },
             title: {
-                text: 'Daily visits at www.highcharts.com'
-            },
-            subtitle: {
-                text: 'Source: Google Analytics'
+                text: '运动步数与时间统计'
             },
             xAxis: {
                 tickInterval: 7 * 24 * 3600 * 1000, // one week
