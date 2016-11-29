@@ -89,7 +89,6 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
     <div class="clear"></div>
     </form>
     <!-----//end-main---->
-
 </div>
 <script type="text/javascript">
     $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});

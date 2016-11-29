@@ -38,38 +38,47 @@ require_once(APPPATH.'views/component/header.php');
 require_once(APPPATH.'views/component/sidebar_activity.php');
 ?>
 <div class="activity-list">
-    <div class="container">
-        <div class="activity-item">
-            <div class="col-md-3 icon-activity">
-                <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
-                <h3>单人比赛</h3>
+    <?php
+    foreach ($data as $item) {
+        ?>
+        <div class="container">
+            <div class="activity-item">
+                <div class="col-md-3 icon-activity">
+                    <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
+                    <h3><?php
+                        if ( $item['type'] == 0) {
+                            echo '单人比赛';
+                        } else {
+                            echo '小组比赛';
+                        }
+                        ?></h3>
+                </div>
+                <div class="col-md-3 summary-activity">
+                    <p><?=$item['title']?></p>
+                </div>
+                <div class="col-md-3 remain-activity">
+                    <p>剩余时间</p>
+                    <span class="activity-remain-time"><?=$item['left']->d?>天<?=$item['left']->h?>小时<?=$item['left']->m?>分<?=$item['left']->s?>秒</span>
+                </div>
+                <div class="col-md-3 button-activity">
+                    <button name="<?=$item['aid']?>" type="button" class="btn btn-primary activity-button" data-toggle="button" aria-pressed="false" autocomplete="off">
+                        去参加<i class="glyphicon glyphicon-menu-right"> </i>
+                    </button>
+                </div>
+                <div class="clearfix"> </div>
             </div>
-            <div class="col-md-3 summary-activity">
-                <p>第一个单人比赛</p>
-            </div>
-            <div class="col-md-3 remain-activity">
-                <p>剩余时间</p>
-                <span class="activity-remain-time">1天1小时1分1秒</span>
-            </div>
-            <div class="col-md-3 button-activity">
-                <button type="button" class="btn btn-primary activity-button" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    去参加<i class="glyphicon glyphicon-menu-right"> </i>
-                </button>
-            </div>
-            <div class="clearfix"> </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="activity-item">
+        <?php
+    }
+    ?>
 
-            <div class="clearfix"> </div>
-        </div>
-    </div>
     <div class="container">
-        <div class="activity-item">
-
-            <div class="clearfix"> </div>
-        </div>
+        <nav>
+            <ul class="pager">
+                <li class="previous"><a href="#">&larr; 上一页</a></li>
+                <li class="next"><a href="#">下一页 &rarr;</a></li>
+            </ul>
+        </nav>
     </div>
 </div>
 <?php
