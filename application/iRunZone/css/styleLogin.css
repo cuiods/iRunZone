@@ -213,6 +213,15 @@ input[type=submit] {
 .copy-right a:hover{
 	color:#fff;
 }
+.activity-select {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.form-control {
+	margin-bottom: 1em;
+	margin-top: 1em;
+	font-size: 1.5em;
+}
 /*----start-responsive design-----*/
 @media (max-width:1440px){
 	.main {
@@ -338,3 +347,4 @@ input[type=submit] {
 		line-height: 28px;
 	}
 }
+

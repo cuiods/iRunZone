@@ -54,7 +54,7 @@ require_once(APPPATH.'views/component/header.php');
     <?php echo form_open('auth/register'); ?>
         <div class="lable">
             <label for="user_register">请输入用户名</label>
-            <input id="user_register" type="text" required="" name="username" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
+            <input id="user_register" type="text" required="" name="username" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
         </div>
         <div class="clear"> </div>
         <div class="lable-2">

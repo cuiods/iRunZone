@@ -477,3 +477,55 @@
 #sport-sleep-statistic {
 	margin-bottom: 5em;
 }
+
+.activity-list{
+	padding: 1em;
+	background-color: #c4e3f3;
+}
+
+.activity-item {
+	height: 15em;
+	background-color: #204d74;
+	margin: 1em;
+}
+
+.icon-activity {
+	position: relative;
+	top: 25%;
+	left: 5%;
+}
+
+.summary-activity {
+	text-align: center;
+	padding-top: 4em;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 1.5em;
+}
+
+.remain-activity {
+	text-align: center;
+	padding-top: 3em;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 1.5em;
+}
+.activity-remain-time {
+	color: #ac2925;
+}
+
+.button-activity {
+	position: relative;
+	padding-top: 6em;
+	padding-left: 1em;
+}
+
+.button-my-activity {
+	position: relative;
+	padding-top: 3.5em;
+	padding-left: 1em;
+}
+
+.activity-button {
+	font-size: 1.2em;
+}

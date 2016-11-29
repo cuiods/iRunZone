@@ -82,7 +82,7 @@
     <!-----start-main---->
     <div class="lable">
         <h3>请输入用户名</h3>
-        <input type="text" name="username_login" required="" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" id="active">
+        <input type="text" name="username_login" required="" class="text" value="<?php echo set_value('username'); ?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}" >
     </div>
     <div class="clear"> </div>
     <div class="lable-2">
