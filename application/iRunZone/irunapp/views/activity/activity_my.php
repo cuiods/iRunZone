@@ -62,7 +62,7 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
                     <span class="activity-remain-time"><?=$item['left']->d?>天<?=$item['left']->h?>小时<?=$item['left']->m?>分<?=$item['left']->s?>秒</span>
                 </div>
                 <div class="col-md-3 button-my-activity">
-                    <button name="<?=$item['aid']?>" type="button" class="btn btn-primary activity-button" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <button onclick="location.href='<?="/activity/detail/".$item['aid']?>'" type="button" class="btn btn-primary activity-button" data-toggle="button" aria-pressed="false" autocomplete="off">
                         去参加<i class="glyphicon glyphicon-menu-right"> </i>
                     </button>
                 </div>

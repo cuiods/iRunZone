@@ -70,9 +70,16 @@ class Activity extends CI_Controller {
         $this->load->view("activity/activity_my",$final);
     }
 
+    public function joinActivity($aid) {
+        $this->load->model('activity_model');
+        $this->activity_model->insertJoiner($aid, $_SESSION['uid']);
+        redirect("/activity/detail/".$aid);
+    }
+
     public function detail($aid) {
         $this->load->model('activity_model');
-        $this->load->view('activity/activity_detail');
+        $row = $this->activity_model->getActivityDetail($aid);
+        $this->load->view('activity/activity_detail',$row);
     }
 
     private function authdetect() {

@@ -51,10 +51,10 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
                 <img src="<?=base_url().'images/img3.jpg'?>" class="img-responsive" alt=""/>
             </div>
             <div class="col-md-9 abt-info-pic">
-                <h3>Web作业单人PK赛</h3>
-                <p>在写web作业的时候比一比谁每天运动时间长在写web作业的时候比一比谁每天运动时间长在写web作业的时候比一比谁每
-                    天运动时间长在写web作业的时候比一比谁每天运动时间长在写web作业的时候比一比谁每天运动时间长在写web作业的时候
-                    比一比谁每天运动时间长在写web作业的时候比一比谁每天运动时间长在写web作业的时候比一比谁每天运动时间长</p>
+                <h3><?=$title?></h3>
+                <p><?=$description?></p>
+                <p>开始时间：<?=$start?></p>
+                <p>结束时间：<?=$end?></p>
                 <button type="button" class="btn btn-default navbar-btn">加入活动</button>
                 <button type="button" class="btn btn-default navbar-btn">退出活动</button>
             </div>

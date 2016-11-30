@@ -40,6 +40,36 @@ class Activity_model extends CI_Model {
         return $query->result();
     }
 
+    public function getActivityDetail($aid) {
+        $query = $this->db->get("t_activity",array("aid"=>$aid));
+        foreach ($query->result() as $row) {
+            return $row;
+        }
+    }
+
+    public function getActivityJoiner($aid) {
+        $query = $this->db->get("t_activity",array("aid"=>$aid));
+        foreach ($query->result() as $row) {
+            $activity = $row;
+            break;
+        }
+        $result = array();
+        if ($activity->type == 0) {
+            $sql = "SELECT * FROM t_activity_join joiner JOIN t_user_base base ON joiner.uid=base.uid WHERE joiner.aid=? ";
+            $query = $this->db->query($sql,array($aid));
+            $result = $query->result();
+        }
+        return $result;
+    }
+
+    public function insertJoiner($aid, $uid) {
+        $data = array(
+            'aid'=>$aid,
+            'uid'=>$uid
+        );
+        $this->db->insert('t_activity_join',$data);
+    }
+
     public function deleteActivity($aid) {
         $this->db->delete("t_activity",array("aid"=>$aid));
     }
