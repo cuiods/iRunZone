@@ -76,6 +76,25 @@ class Activity extends CI_Controller {
         redirect("/activity/detail/".$aid);
     }
 
+    public function leaveActivity($aid) {
+        $this->load->model('activity_model');
+        $this->activity_model->deleteJoiner($aid, $_SESSION['uid']);
+        redirect("/activity/detail/".$aid);
+    }
+
+    public function editActivity($aid) {
+        $this->load->model('activity_model');
+        $row = $this->activity_model->getActivityDetail($aid);
+        $this->load->view('activity/activity_edit',$row);
+    }
+
+    public function edit($aid) {
+        $this->authdetect();
+        $this->load->model('activity_model');
+        $this->activity_model->editActivity($aid,$_POST['activityName'],$_POST['activityType'],$_POST['startTime'],$_POST['endTime'],$_POST['description'],$_SESSION['uid']);
+        redirect("/activity/my");
+    }
+
     public function detail($aid) {
         $this->load->model('activity_model');
         $row = $this->activity_model->getActivityDetail($aid);

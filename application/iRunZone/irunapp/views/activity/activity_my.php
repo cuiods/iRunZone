@@ -44,6 +44,7 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
         <div class="container">
             <div class="activity-item">
                 <i onclick="location.href='/activity/delete/<?=$item['aid']?>'" class="fa fa-trash-o" aria-hidden="true" style="float: right; padding-right: 1em; padding-top: 1em"></i>
+                <i onclick="location.href='/activity/editActivity/<?=$item['aid']?>'" class="fa fa-pencil-square-o" aria-hidden="true" style="float: right; padding-right: 1em; padding-top: 1em"></i>
                 <div class="col-md-3 icon-activity">
                     <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
                     <h3><?php

@@ -18,7 +18,7 @@
                 <ul class="nav navbar-nav navbar-right margin-top cl-effect-2">
                     <li><a href="/index.php"><span data-hover="Home">首页</span></a></li>
                     <li><a href="/activity/show"><span data-hover="Activity">活动</span></a></li>
-                    <li><a href=""><span data-hover="Actions">动态</span></a></li>
+                    <li><a href="/post/show"><span data-hover="Actions">动态</span></a></li>
                     <li><a href=""><span data-hover="Group">小组</span></a></li>
                     <li><a href="/sport"><span data-hover="Statistic">运动</span></a></li>
                     <?php

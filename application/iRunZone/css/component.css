@@ -533,3 +533,11 @@
 .activity-progress {
 	margin-top: 1.5em;
 }
+.post-form {
+	margin-bottom: 5em;
+}
+.post-title {
+	margin-top: 5em;
+	margin-bottom: 2em;
+	font-size: 1.2em;
+}

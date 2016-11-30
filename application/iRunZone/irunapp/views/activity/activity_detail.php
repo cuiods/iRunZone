@@ -65,11 +65,11 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
                 }
                 if ($isIn) {
                     ?>
-                    <button type="button" class="btn btn-default navbar-btn">退出活动</button>
+                    <button onclick="location.href='/activity/leaveActivity/<?=$aid?>'" type="button" class="btn btn-default navbar-btn">退出活动</button>
                     <?php
                 } else {
                     ?>
-                    <button onclick="location.href='/activity/joinActivity/<?$aid?>'" type="button" class="btn btn-default navbar-btn">参加活动</button>
+                    <button onclick="location.href='/activity/joinActivity/<?=$aid?>'" type="button" class="btn btn-default navbar-btn">参加活动</button>
                     <?php
                 }
                 ?>

@@ -75,6 +75,23 @@ class Activity_model extends CI_Model {
         $this->db->insert('t_activity_join',$data);
     }
 
+    public function editActivity($aid, $title,$type,$start,$end,$description,$uid) {
+        $this->db->delete("t_activity",array("aid"=>$aid));
+        $data = array(
+            'title'=>$title,
+            'type'=>$type,
+            'start'=>$start,
+            'end'=>$end,
+            'description'=>$description,
+            'uid'=>$uid
+        );
+        $this->db->insert('t_activity',$data);
+    }
+
+    public function deleteJoiner($aid, $uid) {
+        $this->db->delete("t_activity_join",array("aid"=>$aid, "uid"=>$uid));
+    }
+
     public function deleteActivity($aid) {
         $this->db->delete("t_activity",array("aid"=>$aid));
     }
