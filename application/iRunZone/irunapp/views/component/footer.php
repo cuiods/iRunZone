@@ -5,10 +5,9 @@
         <div class="col-md-6 footer-left">
             <ul>
                 <li><a href="">首页</a></li>
+                <li><a href="">运动</a></li>
                 <li><a href="">活动</a></li>
                 <li><a href="">动态</a></li>
-                <li><a href="">小组</a></li>
-                <li><a href="">运动</a></li>
             </ul>
             <form>
                 <input type="text" placeholder="Email" required="">

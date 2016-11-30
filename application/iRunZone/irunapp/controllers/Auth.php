@@ -14,6 +14,11 @@ class Auth extends CI_Controller {
         $this->load->view('auth/login_view');
     }
 
+    public function logout() {
+        session_destroy();
+        redirect('/welcome');
+    }
+
     /**
      * register controller
      */

@@ -27,9 +27,10 @@ class AddData extends CI_Controller {
     }
 
     public function addExerciseData() {
+        date_default_timezone_set("Asia/Shanghai");
         $this->load->model('sport_model');
-        for ($i = 1; $i < 10; $i++) {
-            $this->sport_model->addExerciseData(3,date("Y-m-d", strtotime("+$i days")),500+mt_rand(-200,200),8000+mt_rand(-3000,3000), 5000+mt_rand(-1500,1500), 60+mt_rand(-40,40));
+        for ($i = 1; $i < 100; $i++) {
+            $this->sport_model->addSportData(9,date("Y-m-d", strtotime("-$i days")),500+mt_rand(-200,200),8000+mt_rand(-3000,3000), 5000+mt_rand(-1500,1500), 60+mt_rand(-40,40));
         }
         echo 'complete';
     }

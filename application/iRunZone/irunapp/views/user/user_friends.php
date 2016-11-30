@@ -16,7 +16,6 @@
     <link rel="stylesheet" href='<?=base_url().'css/bootstrap-vertical-menu.css'?>'/>
     <link rel="stylesheet" type="text/css" href='<?=base_url().'css/default.css'?>' />
     <link rel="stylesheet" type="text/css" href='<?=base_url().'css/component.css'?>' />
-    <link rel="stylesheet" href='<?=base_url().'css/templatemo-blue.css'?>'/>
 
     <!--/hover-grids-->
     <script type="text/javascript" src='<?=base_url().'js/move-top.js'?>'></script>
@@ -39,63 +38,43 @@ require_once(APPPATH.'views/component/header.php');
 require_once(APPPATH.'views/component/sidebar_user.php');
 ?>
 
-<!-- header section -->
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <img src="<?=base_url()?>images/head.jpeg" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
-                <hr>
-                <h1 class="tm-title bold shadow">我是<?=$user->uname?></h1>
-                <h1 class="white bold shadow"><?=$user->description?></h1>
-                <?php
-                if ($isFollow==1) {
-                    ?>
-                    <button onclick="location.href='/user/unfollow/<?=$user->uid?>'" type="button" class="btn btn-default navbar-btn">取消关注</button>
-                    <?php
-                } else if ($isFollow==-1){
-                    ?>
-                    <button onclick="location.href='/user/follow/<?=$user->uid?>'" type="button" class="btn btn-default navbar-btn">关注</button>
-                    <?php
-                }
-                ?>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- contact and experience -->
-<section class="container user-bottom">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-4 col-sm-12">
-            <div class="contact">
-                <h2>个人信息</h2>
-                <p><i class="fa fa-birthday-cake"></i> 生日：<?=$user->birthday?></p><br/>
-                <p><i class="fa fa-map-marker"></i> 地点：<?=$user->location?></p><br/>
-                <p><i class="fa fa-flag"></i> 目标体重；<?=$user->ideal_weight?>KG</p>
-            </div>
-        </div>
-        <div class="col-md-8 col-sm-12">
-            <div class="experience">
-                <h2 class="white">参加的活动</h2>
-                <?php
-                $i = 0;
-                foreach ($activities as $activity) {
-                    ?>
-                    <div class="experience-content">
-                        <h4 class="experience-title accent"><?=$activity->title?></h4>
-                        <h5><?=$activity->start?></h5><span>-</span>
-                        <h5><?=$activity->end?></h5>
-                    </div>
-                    <?php
-                    $i++;
-                    if ($i>=2) break;
-                }
+        <div class="col-sm-12 col-sm-offset-3 col-md-9 col-md-offset-2 main">
+            <h1 class="page-header" id="my-follwer">我关注的人</h1>
+            <?php
+            foreach ($following as $item) {
                 ?>
-            </div>
+                <div class="grid-4">
+                    <div class="team-grid">
+                        <img src="<?=base_url()?>images/head.jpeg" alt="">
+                        <h4><a href="/user/userInfo/<?=$item->uid?>"><?=$item->uname?></a></h4>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+
+            <div class="clearfix"> </div>
+
+
+            <h1 class="page-header" id="my-followed">关注我的人</h1>
+            <?php
+            foreach ($follower as $item) {
+                ?>
+                <div class="grid-4">
+                    <div class="team-grid">
+                        <img src="<?=base_url()?>images/head.jpeg" alt="">
+                        <h4><a href="/user/userInfo/<?=$item->uid?>"><?=$item->uname?></a></h4>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+            <div class="clearfix"> </div>
         </div>
     </div>
-</section>
+</div>
 
 <?php
 require_once(APPPATH.'views/component/footer.php');

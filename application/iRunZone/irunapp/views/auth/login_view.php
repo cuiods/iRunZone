@@ -51,16 +51,15 @@
                     <span class="icon-bar"> </span>
                     <span class="icon-bar"> </span>
                 </button>
-                <h1><a class="navbar-brand" href="../index.html">iRunZone<br /><span>爱跑空间</span></a></h1>
+                <h1><a class="navbar-brand" href="../index.php">iRunZone<br /><span>爱跑空间</span></a></h1>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right margin-top cl-effect-2">
-                    <li><a href="../index.php"><span data-hover="Home">首页</span></a></li>
-                    <li><a href=""><span data-hover="Activity">活动</span></a></li>
-                    <li><a href=""><span data-hover="Actions">动态</span></a></li>
-                    <li><a href=""><span data-hover="Group">小组</span></a></li>
+                    <li><a href="/index.php"><span data-hover="Home">首页</span></a></li>
                     <li><a href="/sport"><span data-hover="Statistic">运动</span></a></li>
+                    <li><a href="/activity/show"><span data-hover="Activity">活动</span></a></li>
+                    <li><a href="/post/show"><span data-hover="Actions">动态</span></a></li>
                 </ul>
                 <div class="clearfix"> </div>
             </div><!-- /.navbar-collapse -->
