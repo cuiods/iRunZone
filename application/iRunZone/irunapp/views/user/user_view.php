@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
-    <title>iRunZone-运动</title>
+    <title>iRunZone-个人信息</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href='<?=base_url().'css/style.css'?>' rel="stylesheet" type="text/css"/>
@@ -35,52 +35,9 @@
 </head>
 <?php
 require_once(APPPATH.'views/component/header.php');
-require_once(APPPATH.'views/component/sidebar_activity.php');
+require_once(APPPATH.'views/component/sidebar_user.php');
 ?>
-<div class="activity-list">
-    <?php
-    foreach ($data as $item) {
-        ?>
-        <div class="container">
-            <div class="activity-item">
-                <i onclick="location.href='/activity/delete/<?=$item['aid']?>'" class="fa fa-trash-o" aria-hidden="true" style="float: right; padding-right: 1em; padding-top: 1em"></i>
-                <div class="col-md-3 icon-activity">
-                    <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
-                    <h3><?php
-                        if ( $item['type'] == 0) {
-                            echo '单人比赛';
-                        } else {
-                            echo '小组比赛';
-                        }
-                        ?></h3>
-                </div>
-                <div class="col-md-3 summary-activity">
-                    <p><?=$item['title']?></p>
-                </div>
-                <div class="col-md-3 remain-activity">
-                    <p>剩余时间</p>
-                    <span class="activity-remain-time"><?=$item['left']->d?>天<?=$item['left']->h?>小时<?=$item['left']->m?>分<?=$item['left']->s?>秒</span>
-                </div>
-                <div class="col-md-3 button-my-activity">
-                    <button onclick="location.href='<?="/activity/detail/".$item['aid']?>'" type="button" class="btn btn-primary activity-button" data-toggle="button" aria-pressed="false" autocomplete="off">
-                        去参加<i class="glyphicon glyphicon-menu-right"> </i>
-                    </button>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-        <?php
-    }
-    ?>
-    <div class="container">
-        <nav>
-            <ul class="pager">
-                <li class="previous"><a href="#">&larr; 上一页</a></li>
-                <li class="next"><a href="#">下一页 &rarr;</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
+
 <?php
 require_once(APPPATH.'views/component/footer.php');
 ?>

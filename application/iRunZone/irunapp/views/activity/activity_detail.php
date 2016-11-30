@@ -55,61 +55,61 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
                 <p><?=$description?></p>
                 <p>开始时间：<?=$start?></p>
                 <p>结束时间：<?=$end?></p>
-                <button type="button" class="btn btn-default navbar-btn">加入活动</button>
-                <button type="button" class="btn btn-default navbar-btn">退出活动</button>
+                <?php
+                $isIn = false;
+                foreach ($joiners as $joiner) {
+                    if (strcmp($joiner->name,$_SESSION['username'])==0) {
+                        $isIn = true;
+                        break;
+                    }
+                }
+                if ($isIn) {
+                    ?>
+                    <button type="button" class="btn btn-default navbar-btn">退出活动</button>
+                    <?php
+                } else {
+                    ?>
+                    <button onclick="location.href='/activity/joinActivity/<?$aid?>'" type="button" class="btn btn-default navbar-btn">参加活动</button>
+                    <?php
+                }
+                ?>
             </div>
             <div class="clearfix"> </div>
         </div>
         <div class="team">
             <h3>参赛用户</h3>
-            <div class="activity-detail-grade">
-                <div class="grid-4">
-                    <div class="team-grid">
-                        <h4>Cassy_luu</h4>
+            <?php
+            $i=1;
+            foreach ($joiners as $joiner) {
+                ?>
+                <div class="activity-detail-grade">
+                    <div class="grid-4">
+                        <div class="team-grid">
+                            <h4><?=$joiner->name?></h4>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-4">
-                    <div class="team-grid">
-                        <h4>12343步</h4>
+                    <div class="grid-4">
+                        <div class="team-grid">
+                            <h4><?=$joiner->stepnum?></h4>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-4">
-                    <div class="team-grid">
-                        <h4>第1名</h4>
+                    <div class="grid-4">
+                        <div class="team-grid">
+                            <h4>第<?=$i++?>名</h4>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-4">
-                    <div class="progress grid-9 activity-progress">
-                        <div class="progress-bar " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                            <span class="sr-only">60% Complete</span>
+                    <div class="grid-4">
+                        <div class="progress grid-9 activity-progress">
+                            <div class="progress-bar " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                <span class="sr-only">60% Complete</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="activity-detail-grade">
-                <div class="grid-4">
-                    <div class="team-grid">
-                        <h4>Cassy_luu</h4>
-                    </div>
-                </div>
-                <div class="grid-4">
-                    <div class="team-grid">
-                        <h4>12343步</h4>
-                    </div>
-                </div>
-                <div class="grid-4">
-                    <div class="team-grid">
-                        <h4>第1名</h4>
-                    </div>
-                </div>
-                <div class="grid-4">
-                    <div class="progress grid-9 activity-progress">
-                        <div class="progress-bar " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                            <span class="sr-only">60% Complete</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <?php
+            }
+            ?>
+
             <div class="clearfix"> </div>
         </div>
     </div>

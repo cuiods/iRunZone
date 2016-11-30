@@ -41,7 +41,8 @@ class Activity_model extends CI_Model {
     }
 
     public function getActivityDetail($aid) {
-        $query = $this->db->get("t_activity",array("aid"=>$aid));
+        $sql = "SELECT * FROM t_activity WHERE aid=? ";
+        $query = $this->db->query($sql,array($aid));
         foreach ($query->result() as $row) {
             return $row;
         }
@@ -55,8 +56,12 @@ class Activity_model extends CI_Model {
         }
         $result = array();
         if ($activity->type == 0) {
-            $sql = "SELECT * FROM t_activity_join joiner JOIN t_user_base base ON joiner.uid=base.uid WHERE joiner.aid=? ";
-            $query = $this->db->query($sql,array($aid));
+            $sql = "SELECT base.uname AS name,SUM(exercise.steps) AS stepnum FROM t_activity_join joiner JOIN t_user_base base ON joiner.uid=base.uid ".
+                "JOIN t_exercise exercise ON base.uid = exercise.uid ".
+                "WHERE joiner.aid=? AND julianday(exercise.date)>=julianday(?) AND julianday(exercise.date)<=julianday(?) ".
+                "GROUP BY base.uname ".
+                "ORDER BY SUM(exercise.steps) DESC";
+            $query = $this->db->query($sql,array($aid,$activity->start,$activity->end));
             $result = $query->result();
         }
         return $result;

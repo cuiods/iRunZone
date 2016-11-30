@@ -79,7 +79,15 @@ class Activity extends CI_Controller {
     public function detail($aid) {
         $this->load->model('activity_model');
         $row = $this->activity_model->getActivityDetail($aid);
+        $joiners = $this->activity_model->getActivityJoiner($aid);
+        $row->joiners = $joiners;
         $this->load->view('activity/activity_detail',$row);
+    }
+
+    public function delete($aid) {
+        $this->load->model('activity_model');
+        $this->activity_model->deleteActivity($aid);
+        redirect("/activity/my");
     }
 
     private function authdetect() {

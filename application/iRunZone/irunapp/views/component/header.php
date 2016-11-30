@@ -16,7 +16,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right margin-top cl-effect-2">
-                    <li><a href="../index.php"><span data-hover="Home">首页</span></a></li>
+                    <li><a href="/index.php"><span data-hover="Home">首页</span></a></li>
                     <li><a href="/activity/show"><span data-hover="Activity">活动</span></a></li>
                     <li><a href=""><span data-hover="Actions">动态</span></a></li>
                     <li><a href=""><span data-hover="Group">小组</span></a></li>
@@ -24,7 +24,7 @@
                     <?php
                     if (isset($_SESSION['username'])) {
                         ?>
-                        <li><a href=""><span data-hover="Statistic"><?=$_SESSION['username']?></span></a></li>
+                        <li><a href="/user"><span data-hover="Statistic"><?=$_SESSION['username']?></span></a></li>
                         <?php
                     }
                     ?>
