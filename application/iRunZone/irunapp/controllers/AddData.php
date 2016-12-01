@@ -17,6 +17,11 @@ class AddData extends CI_Controller {
         }
     }
 
+    public function addTrack($uid, $time, $steps) {
+        $this->load->model('sport_model');
+        $this->sport_model->addTrackData($uid,$time,$steps);
+    }
+
     public function addBodyData() {
         $this->load->model('sport_model');
         date_default_timezone_set("Asia/Shanghai");
@@ -26,6 +31,12 @@ class AddData extends CI_Controller {
         echo 'complete';
     }
 
+    public function addBody($uid, $date, $height, $weight) {
+        $this->load->model('sport_model');
+        date_default_timezone_set("Asia/Shanghai");
+        $this->sport_model->addBodyData($uid,$date,$height, $weight);
+    }
+
     public function addExerciseData() {
         date_default_timezone_set("Asia/Shanghai");
         $this->load->model('sport_model');
@@ -33,6 +44,12 @@ class AddData extends CI_Controller {
             $this->sport_model->addSportData(9,date("Y-m-d", strtotime("-$i days")),500+mt_rand(-200,200),8000+mt_rand(-3000,3000), 5000+mt_rand(-1500,1500), 60+mt_rand(-40,40));
         }
         echo 'complete';
+    }
+
+    public function addExercise($uid,$date,$calories,$steps,$meters,$minutes) {
+        date_default_timezone_set("Asia/Shanghai");
+        $this->load->model('sport_model');
+        $this->sport_model->addSportData($uid,$date,$calories,$steps, $meters, $minutes);
     }
 
     public function addSleepData() {
@@ -51,6 +68,11 @@ class AddData extends CI_Controller {
             $this->sport_model->addSleepData(3,date("Y-m-d", strtotime("+$i days")),180+mt_rand(-100,100),60+mt_rand(-40,40),480+mt_rand(-60,60),300+mt_rand(-40,40),implode(",",$tempDetal));
         }
         echo 'complete!';
+    }
+
+    public function addSleep($uid,$date,$deep_minutes,$sleep_complete,$total_minutes,$light_minutes,$detail) {
+        $this->load->model('sport_model');
+        $this->sport_model->addSleepData($uid,$date,$deep_minutes,$sleep_complete,$total_minutes,$light_minutes,$detail);
     }
 
 }
