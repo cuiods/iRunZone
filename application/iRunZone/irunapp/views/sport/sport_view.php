@@ -57,17 +57,17 @@ require_once(APPPATH.'views/component/sidebar_sport.php');
     <div class="container">
         <div class="welcome-gridsinfo">
             <div class="col-md-4 welcome-grid">
-                <i class="glyphicon glyphicon-pencil"> </i>
+                <i class="glyphicon glyphicon-road"> </i>
                 <p>累计运动</p>
                 <h3><?=$sum->meters?>米</h3>
             </div>
             <div class="col-md-4 welcome-grid">
-                <i class="glyphicon glyphicon-font"> </i>
+                <i class="glyphicon glyphicon-time"> </i>
                 <p>累计运动</p>
                 <h3><?=$sum->minutes?>分钟</h3>
             </div>
             <div class="col-md-4 welcome-grid">
-                <i class="glyphicon glyphicon-blackboard"> </i>
+                <i class="glyphicon glyphicon-fire"> </i>
                 <p>累计消耗</p>
                 <h3><?=$sum->calories?>大卡</h3>
             </div>

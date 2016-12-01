@@ -13,6 +13,11 @@ class Auth_model extends CI_Model {
         $data = array('uname' => $name, 'psw' => $psw);
         $str =  $this->db->insert_string('t_user_base', $data);
         $this->db->query($str);
+        $user = $this->getUserIdByName($name);
+        if (isset($user)) {
+            $data2 = array('uid'=>$user->uid,'birthday'=>'1996-01-01','sex'=>0,'location'=>'南京');
+            $this->db->insert('t_user_info',$data2);
+        }
     }
 
     /**
@@ -31,6 +36,7 @@ class Auth_model extends CI_Model {
         foreach ($query->result() as $row) {
             if ($row->psw == $password) {
                 $result_code = 2;
+                $this->session->set_userdata("type",$row->login_type);
             } else {
                 $result_code = 1;
             }

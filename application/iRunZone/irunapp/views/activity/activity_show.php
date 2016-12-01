@@ -72,14 +72,6 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
     }
     ?>
 
-    <div class="container">
-        <nav>
-            <ul class="pager">
-                <li class="previous"><a href="#">&larr; 上一页</a></li>
-                <li class="next"><a href="#">下一页 &rarr;</a></li>
-            </ul>
-        </nav>
-    </div>
 </div>
 <?php
 require_once(APPPATH.'views/component/footer.php');

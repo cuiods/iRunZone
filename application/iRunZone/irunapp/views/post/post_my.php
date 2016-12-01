@@ -39,7 +39,9 @@ require_once(APPPATH.'views/component/sidebar_post.php');
 ?>
 <div class="my-activity">
     <?php
+    $i = 0;
     foreach ($summary as $item) {
+        $i++;
         ?>
         <div class="container">
             <div class="about-info-grids">
@@ -56,17 +58,12 @@ require_once(APPPATH.'views/component/sidebar_post.php');
         </div>
         <?php
     }
+    if ($i==0) {
+        echo "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你还没有发表文章呢！去<a href='/post'>创建</a>吧！</h2>";
+    }
     ?>
 </div>
 
-    <div class="container">
-        <nav>
-            <ul class="pager">
-                <li class="previous"><a href="#">&larr; 上一页</a></li>
-                <li class="next"><a href="#">下一页 &rarr;</a></li>
-            </ul>
-        </nav>
-    </div>
 <?php
 require_once(APPPATH.'views/component/footer.php');
 ?>

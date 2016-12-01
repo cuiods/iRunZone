@@ -13,7 +13,17 @@
             </a>
         </li>
         <li>
-            <a href="/activity/my">
+            <?php
+            if ($_SESSION['type']==1) {
+                ?>
+            <a href="/manage">
+                <?php
+            } else {
+                  ?>
+                <a href="/activity/my">
+                    <?php
+                }
+            ?>
                 <i class="fa fa-fw fa-lg fa-comments-o"></i>
                 <span>我</span>
             </a>

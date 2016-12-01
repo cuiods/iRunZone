@@ -39,7 +39,9 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
 ?>
 <div class="activity-list">
     <?php
+    $i = 0;
     foreach ($data as $item) {
+        $i++;
         ?>
         <div class="container">
             <div class="activity-item">
@@ -72,15 +74,10 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
         </div>
         <?php
     }
+    if ($i==0) {
+        echo "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你还没有发布活动呢！去<a href='/activity'>创建</a>吧！</h2>";
+    }
     ?>
-    <div class="container">
-        <nav>
-            <ul class="pager">
-                <li class="previous"><a href="#">&larr; 上一页</a></li>
-                <li class="next"><a href="#">下一页 &rarr;</a></li>
-            </ul>
-        </nav>
-    </div>
 </div>
 <?php
 require_once(APPPATH.'views/component/footer.php');

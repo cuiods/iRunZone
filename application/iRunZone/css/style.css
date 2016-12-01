@@ -663,7 +663,7 @@ i.glyphicon.glyphicon-pencil {
 .welcome-grid:hover.welcome-grid h3{
 	color:#E1009F ;
 }
-i.glyphicon.glyphicon-font{
+i.glyphicon.glyphicon-road{
 	font-size: 3em;
 }
 .welcome-grid:hover.welcome-grid h3{
@@ -672,10 +672,13 @@ i.glyphicon.glyphicon-font{
 i.glyphicon.glyphicon-blackboard{
     font-size: 3em;
 }
+i.glyphicon.glyphicon-fire{
+    font-size: 3em;
+}
 .welcome-grid:hover.welcome-grid h3{
 	color:#E1009F ;
 }
-i.glyphicon.glyphicon-education{
+i.glyphicon.glyphicon-time{
     font-size: 3em;
 }
 .welcome-grid:hover.welcome-grid h3{

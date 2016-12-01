@@ -479,6 +479,7 @@
 }
 
 .activity-list{
+	min-height: 500px;
 	padding: 1em;
 	background-color: #c4e3f3;
 }
@@ -540,4 +541,8 @@
 	margin-top: 5em;
 	margin-bottom: 2em;
 	font-size: 1.2em;
+}
+
+.my-activity {
+	min-height: 500px;
 }

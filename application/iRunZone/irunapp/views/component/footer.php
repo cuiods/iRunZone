@@ -4,10 +4,10 @@
     <div class="container">
         <div class="col-md-6 footer-left">
             <ul>
-                <li><a href="">首页</a></li>
-                <li><a href="">运动</a></li>
-                <li><a href="">活动</a></li>
-                <li><a href="">动态</a></li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/sport">运动</a></li>
+                <li><a href="/activity/show">活动</a></li>
+                <li><a href="/post/show">动态</a></li>
             </ul>
             <form>
                 <input type="text" placeholder="Email" required="">
