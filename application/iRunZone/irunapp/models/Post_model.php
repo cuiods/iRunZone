@@ -17,6 +17,10 @@ class Post_model extends CI_Model {
         $this->db->insert('t_post',$data);
     }
 
+    public function deletePost($pid) {
+        $this->db->delete("t_post",array("pid"=>$pid));
+    }
+
     public function getSummaryList($offset, $limit) {
         $sql = "SELECT pid, title, uid FROM t_post LIMIT ? OFFSET ? ";
         $query = $this->db->query($sql,array($limit,$offset));
@@ -24,8 +28,11 @@ class Post_model extends CI_Model {
     }
 
     public function getDetail($pid) {
-        $query = $this->db->get('t_post',array('pid'=>$pid));
-        return $query->row();
+        $sql = "SELECT * FROM t_post WHERE pid = ? ";
+        $query = $this->db->query($sql,array($pid));
+        foreach ($query->result() as $item) {
+            return $item;
+        }
     }
 
     public function getMyList($uid, $offset, $limit){

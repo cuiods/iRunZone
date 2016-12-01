@@ -49,6 +49,7 @@ require_once(APPPATH.'views/component/sidebar_post.php');
                     <img src="<?=base_url()?>images/img<?=mt_rand(1,4)?>.jpg" class="img-responsive" alt=""/>
                 </div>
                 <div class="col-md-9 abt-info-pic">
+                    <i onclick="location.href='/post/delete/<?=$item->pid?>'" class="fa fa-trash-o" aria-hidden="true" style="float: right; padding-right: 1em; padding-top: 1em"></i>
                     <h3><a href="/post/detail/<?=$item->pid?>"><?=$item->title?></a></h3>
                     <p>传说中的电动小马达，八块腹肌，马甲线，通过核心改造get起来！传说中的电动小马达，八块腹肌，马甲线，通过核心改造get起来！
                         传说中的电动小马达，八块腹肌，马甲线，通过核心改造get起来！传说中的电动小马达，八块腹肌，马甲线，通过核心改造get起来！</p>

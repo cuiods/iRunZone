@@ -51,17 +51,17 @@ require_once(APPPATH.'views/component/sidebar_sport.php');
     <div class="container">
         <div class="welcome-gridsinfo">
             <div class="col-md-4 welcome-grid">
-                <i class="glyphicon glyphicon-pencil"> </i>
+                <i class="glyphicon glyphicon-ok-sign"> </i>
                 <p>睡眠完成度</p>
                 <h3 id="sleep-complete">50%</h3>
             </div>
             <div class="col-md-4 welcome-grid">
-                <i class="glyphicon glyphicon-font"> </i>
+                <i class="glyphicon glyphicon-time"> </i>
                 <p>总睡眠时间</p>
                 <h3 id="sleep-total">8小时</h3>
             </div>
             <div class="col-md-4 welcome-grid">
-                <i class="glyphicon glyphicon-blackboard"> </i>
+                <i class="glyphicon glyphicon-eye-open"> </i>
                 <p>浅睡眠时间</p>
                 <h3 id="sleep-light">6小时</h3>
             </div>

@@ -42,6 +42,12 @@ class Post extends CI_Controller {
         $this->load->view('post/post_my',$data);
     }
 
+    public function delete($pid) {
+        $this->load->model('post_model');
+        $this->post_model->deletePost($pid);
+        redirect("/post/my");
+    }
+
     private function authdetect() {
         if (!isset($_SESSION['username'])||!isset($_SESSION['uid'])) {
             redirect("/auth/loginview");

@@ -83,7 +83,7 @@ require_once(APPPATH.'views/component/sidebar_user.php');
                 foreach ($activities as $activity) {
                     ?>
                     <div class="experience-content">
-                        <h4 class="experience-title accent"><?=$activity->title?></h4>
+                        <h4 class="experience-title accent"><a href="/activity/detail/<?=$activity->aid?>"><?=$activity->title?></a></h4>
                         <h5><?=$activity->start?></h5><span>-</span>
                         <h5><?=$activity->end?></h5>
                     </div>

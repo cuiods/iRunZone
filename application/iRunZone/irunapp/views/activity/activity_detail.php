@@ -53,8 +53,7 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
             <div class="col-md-9 abt-info-pic">
                 <h3><?=$title?></h3>
                 <p><?=$description?></p>
-                <p>开始时间：<?=$start?></p>
-                <p>结束时间：<?=$end?></p>
+                <p>开始时间：<?=$start?> 结束时间：<?=$end?></p>
                 <?php
                 $isIn = false;
                 foreach ($joiners as $joiner) {
@@ -80,7 +79,9 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
             <h3>参赛用户</h3>
             <?php
             $i=1;
+            $maxNum = 0;
             foreach ($joiners as $joiner) {
+                if ($i==1) $maxNum = $joiner->stepnum;
                 ?>
                 <div class="activity-detail-grade">
                     <div class="grid-4">
@@ -100,7 +101,7 @@ require_once(APPPATH.'views/component/sidebar_activity.php');
                     </div>
                     <div class="grid-4">
                         <div class="progress grid-9 activity-progress">
-                            <div class="progress-bar " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <div class="progress-bar " role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: <?=$joiner->stepnum*1.0/$maxNum*100?>%;">
                                 <span class="sr-only">60% Complete</span>
                             </div>
                         </div>

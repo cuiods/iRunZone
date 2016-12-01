@@ -666,6 +666,12 @@ i.glyphicon.glyphicon-pencil {
 i.glyphicon.glyphicon-road{
 	font-size: 3em;
 }
+i.glyphicon.glyphicon-ok-sign {
+    font-size: 3em;
+}
+i.glyphicon.glyphicon-eye-open {
+    font-size: 3em;
+}
 .welcome-grid:hover.welcome-grid h3{
 	color:#E1009F ;
 }

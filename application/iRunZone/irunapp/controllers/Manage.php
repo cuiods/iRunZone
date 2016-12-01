@@ -24,4 +24,11 @@ class Manage extends CI_Controller {
         $final['data'] = $data;
         $this->load->view("activity/activity_my",$final);
     }
+
+    public function post() {
+        $this->load->model("post_model");
+        $result = $this->post_model->getSummaryList(0,20);
+        $data['summary'] = $result;
+        $this->load->view('post/post_my',$data);
+    }
 }
